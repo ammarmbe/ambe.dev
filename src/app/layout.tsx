@@ -4,12 +4,13 @@ import { unstable_ViewTransition as ViewTransition } from "react";
 import Header from "./_components/header";
 import "./globals.css";
 
-const inter = Inter();
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export const METADATA = {
   title: "Ammar Elbehery",
   siteUrl: "https://ambe.dev",
-  socialBanner: "/og.png",
   description: "Ammar Elbehery - Full-stack web developer",
   keywords:
     "Ammar Elbehery, Ammar, Elbehery, web developer, full-stack, full-stack web developer, software engineer, software developer, web development, software development, react",
@@ -28,7 +29,6 @@ export const metadata: Metadata = {
     description: METADATA.description,
     url: "./",
     siteName: METADATA.title,
-    images: [METADATA.socialBanner],
     locale: "en_US",
     type: "website",
   },
@@ -46,7 +46,6 @@ export const metadata: Metadata = {
   twitter: {
     title: METADATA.title,
     card: "summary_large_image",
-    images: [METADATA.socialBanner],
   },
   icons: [
     {
