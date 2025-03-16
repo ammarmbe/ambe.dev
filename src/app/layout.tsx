@@ -8,27 +8,20 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const METADATA = {
-  title: "Ammar Elbehery",
-  siteUrl: "https://ambe.dev",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://ambe.dev"),
+  title: {
+    default: "Ammar Elbehery",
+    template: `%s | ${"Ammar Elbehery"}`,
+  },
   description: "Ammar Elbehery - Full-stack web developer",
   keywords:
     "Ammar Elbehery, Ammar, Elbehery, web developer, full-stack, full-stack web developer, software engineer, software developer, web development, software development, react",
-};
-
-export const metadata: Metadata = {
-  metadataBase: new URL(METADATA.siteUrl),
-  title: {
-    default: METADATA.title,
-    template: `%s | ${METADATA.title}`,
-  },
-  description: METADATA.description,
-  keywords: METADATA.keywords,
   openGraph: {
-    title: METADATA.title,
-    description: METADATA.description,
+    title: "Ammar Elbehery",
+    description: "Ammar Elbehery - Full-stack web developer",
     url: "./",
-    siteName: METADATA.title,
+    siteName: "Ammar Elbehery",
     locale: "en_US",
     type: "website",
   },
@@ -44,7 +37,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: METADATA.title,
+    title: "Ammar Elbehery",
     card: "summary_large_image",
   },
   icons: [
